@@ -57,17 +57,18 @@ return [
         ],
         'tenant' => [
             'driver' => 'mysql',
-            'host' => env('TENANT_DB_HOST', '127.0.0.1'),
-            'port' => env('TENANT_DB_PORT', '3306'),
-            'database' => '', // dynamically set per tenant
-            'username' => env('TENANT_DB_USERNAME', 'root'),
-            'password' => env('TENANT_DB_PASSWORD', ''),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => 'tenant1_db', // <-- put your tenant DB name here
+            'username' => 'root',
+            'password' => '',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'strict' => true,
             'engine' => null,
         ],
+
 
 
         'mariadb' => [
